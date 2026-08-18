@@ -1,4 +1,9 @@
 /* =========================================================
+   GH VOOS PT
+   STYLE.CSS COMPLETO
+========================================================= */
+
+/* =========================================================
    RESET
 ========================================================= */
 
@@ -15,11 +20,12 @@ html {
 
 body {
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 
   font-family: Arial, Helvetica, sans-serif;
 
-  background-color: #ffffff;
+  background: #ffffff;
   color: #11162f;
 }
 
@@ -28,19 +34,14 @@ a {
   color: inherit;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 button {
   font-family: inherit;
 }
-
-/* =========================================================
-   CORES
-
-   Azul principal: #080d2b
-   Azul secundário: #11183d
-   Dourado: #e8b832
-   Dourado claro: #f5d46a
-   Branco: #ffffff
-========================================================= */
 
 /* =========================================================
    HEADER
@@ -58,7 +59,7 @@ button {
 
   gap: 25px;
 
-  background-color: #ffffff;
+  background: #ffffff;
 
   border-bottom: 1px solid #eeeeee;
 
@@ -67,7 +68,7 @@ button {
 }
 
 /* =========================================================
-   LOGO
+   LOGO HEADER
 ========================================================= */
 
 .logo {
@@ -84,8 +85,6 @@ button {
   height: 72px;
 
   object-fit: contain;
-
-  display: block;
 }
 
 .logo-text {
@@ -96,21 +95,21 @@ button {
 }
 
 .logo-text strong {
+  color: #080d2b;
+
   font-size: 18px;
 
   letter-spacing: 1px;
-
-  color: #080d2b;
 }
 
 .logo-text span {
   margin-top: 4px;
 
+  color: #777777;
+
   font-size: 10px;
 
   letter-spacing: 2px;
-
-  color: #777777;
 
   white-space: nowrap;
 }
@@ -131,12 +130,12 @@ button {
 }
 
 .menu a {
+  color: #22263d;
+
   font-size: 13px;
   font-weight: 600;
 
-  color: #22263d;
-
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .menu a:hover,
@@ -145,16 +144,18 @@ button {
 }
 
 /* =========================================================
-   BOTÃO HAMBÚRGUER
+   HAMBÚRGUER
 ========================================================= */
 
 .menu-toggle {
   display: none;
 
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
 
-  border: none;
+  padding: 0;
+
+  border: 0;
 
   background: transparent;
 
@@ -165,15 +166,15 @@ button {
   align-items: center;
 
   gap: 5px;
-
-  flex-shrink: 0;
 }
 
 .menu-toggle span {
-  width: 26px;
+  display: block;
+
+  width: 27px;
   height: 3px;
 
-  background-color: #080d2b;
+  background: #080d2b;
 
   border-radius: 5px;
 
@@ -206,19 +207,19 @@ button {
 }
 
 .phone {
-  font-size: 12px;
-
   color: #555555;
+
+  font-size: 12px;
 }
 
 .btn-header {
   padding: 12px 19px;
 
-  border-radius: 5px;
-
-  background-color: #080d2b;
+  background: #080d2b;
 
   color: #ffffff;
+
+  border-radius: 5px;
 
   font-size: 12px;
   font-weight: bold;
@@ -227,7 +228,7 @@ button {
 }
 
 .btn-header:hover {
-  background-color: #e8b832;
+  background: #e8b832;
 
   color: #080d2b;
 }
@@ -239,6 +240,8 @@ button {
 .hero {
   width: 100%;
   min-height: 540px;
+
+  padding: 60px 20px;
 
   position: relative;
 
@@ -254,11 +257,11 @@ button {
 
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
-
   inset: 0;
 
   background: linear-gradient(
@@ -280,17 +283,14 @@ button {
   width: 100%;
   height: 5px;
 
-  background-color: #e8b832;
+  background: #e8b832;
 }
 
 .hero-content {
   width: 100%;
   max-width: 850px;
 
-  padding: 40px 20px;
-
   position: relative;
-
   z-index: 2;
 }
 
@@ -306,10 +306,12 @@ button {
 .hero h1 {
   margin: 20px 0;
 
-  font-size: 62px;
-  line-height: 1.05;
+  color: #ffffff;
 
+  font-size: 62px;
   font-weight: 800;
+
+  line-height: 1.05;
 }
 
 .hero h1 span {
@@ -324,11 +326,12 @@ button {
   color: #e1e3eb;
 
   font-size: 16px;
+
   line-height: 1.6;
 }
 
 /* =========================================================
-   HERO BOTÕES
+   BOTÕES HERO
 ========================================================= */
 
 .hero-buttons {
@@ -340,53 +343,46 @@ button {
   gap: 15px;
 }
 
-.btn-gold {
+.btn-gold,
+.btn-outline {
   display: inline-block;
 
   padding: 14px 27px;
 
   border-radius: 5px;
 
-  background-color: #e8b832;
-
-  color: #080d2b;
-
   font-size: 13px;
   font-weight: bold;
 
   transition: 0.3s;
 }
 
+.btn-gold {
+  background: #e8b832;
+
+  color: #080d2b;
+}
+
 .btn-gold:hover {
-  background-color: #f5d46a;
+  background: #f5d46a;
 
   transform: translateY(-2px);
 }
 
 .btn-outline {
-  display: inline-block;
-
-  padding: 13px 27px;
-
   border: 1px solid #ffffff;
-  border-radius: 5px;
 
   color: #ffffff;
-
-  font-size: 13px;
-  font-weight: bold;
-
-  transition: 0.3s;
 }
 
 .btn-outline:hover {
-  background-color: #ffffff;
+  background: #ffffff;
 
   color: #080d2b;
 }
 
 /* =========================================================
-   BOOKING / PESQUISA
+   BOOKING
 ========================================================= */
 
 .booking {
@@ -398,10 +394,9 @@ button {
   padding: 22px 28px;
 
   position: relative;
+  z-index: 20;
 
-  z-index: 10;
-
-  background-color: #ffffff;
+  background: #ffffff;
 
   border-radius: 8px;
 
@@ -427,7 +422,7 @@ button {
 
   border: none;
 
-  background: none;
+  background: transparent;
 
   color: #777777;
 
@@ -489,16 +484,17 @@ button {
   width: 34px;
   height: 34px;
 
+  flex-shrink: 0;
+
   border: 1px solid #dddddd;
+
   border-radius: 50%;
 
-  background-color: #ffffff;
+  background: #ffffff;
 
   color: #c39118;
 
   cursor: pointer;
-
-  flex-shrink: 0;
 }
 
 .search-button {
@@ -507,9 +503,10 @@ button {
   padding: 14px 23px;
 
   border: none;
+
   border-radius: 5px;
 
-  background-color: #080d2b;
+  background: #080d2b;
 
   color: #ffffff;
 
@@ -521,7 +518,7 @@ button {
 }
 
 .search-button:hover {
-  background-color: #e8b832;
+  background: #e8b832;
 
   color: #080d2b;
 }
@@ -545,6 +542,8 @@ button {
 }
 
 .benefit {
+  min-width: 0;
+
   display: flex;
   align-items: flex-start;
 
@@ -562,7 +561,7 @@ button {
 
   border-radius: 50%;
 
-  background-color: #f9f1d9;
+  background: #f9f1d9;
 
   color: #c39118;
 
@@ -581,6 +580,7 @@ button {
   color: #777777;
 
   font-size: 12px;
+
   line-height: 1.5;
 }
 
@@ -631,14 +631,15 @@ button {
   padding: 11px 17px;
 
   border: 1px solid #d4d4d4;
+
   border-radius: 5px;
 
   font-size: 12px;
   font-weight: bold;
 
-  transition: 0.3s;
-
   white-space: nowrap;
+
+  transition: 0.3s;
 }
 
 .see-more:hover {
@@ -648,10 +649,12 @@ button {
 }
 
 /* =========================================================
-   DESTINATION GRID
+   CARDS DESTINOS
 ========================================================= */
 
 .destination-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -660,12 +663,15 @@ button {
 }
 
 .destination-card {
+  min-width: 0;
+
   overflow: hidden;
 
-  border: 1px solid #eeeeee;
-  border-radius: 7px;
+  background: #ffffff;
 
-  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+
+  border-radius: 7px;
 
   transition: 0.3s;
 }
@@ -677,6 +683,7 @@ button {
 }
 
 .destination-image {
+  width: 100%;
   height: 200px;
 
   position: relative;
@@ -690,28 +697,26 @@ button {
 
   object-fit: cover;
 
-  display: block;
-
   transition: 0.5s;
 }
 
-.destination-card:hover img {
+.destination-card:hover .destination-image img {
   transform: scale(1.05);
 }
 
 .destination-image span {
   position: absolute;
 
-  left: 12px;
   top: 12px;
+  left: 12px;
 
   padding: 6px 9px;
 
-  border-radius: 3px;
-
-  background-color: #080d2b;
+  background: #080d2b;
 
   color: #ffffff;
+
+  border-radius: 3px;
 
   font-size: 9px;
   font-weight: bold;
@@ -735,6 +740,7 @@ button {
   color: #777777;
 
   font-size: 12px;
+
   line-height: 1.5;
 }
 
@@ -754,10 +760,12 @@ button {
 
   padding: 70px 10%;
 
-  background-color: #f7f7f9;
+  background: #f7f7f9;
 }
 
 .package-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -766,12 +774,15 @@ button {
 }
 
 .package-card {
+  min-width: 0;
+
   padding: 30px;
 
-  border: 1px solid #eeeeee;
-  border-radius: 7px;
+  background: #ffffff;
 
-  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+
+  border-radius: 7px;
 
   transition: 0.3s;
 }
@@ -789,14 +800,14 @@ button {
   margin-bottom: 20px;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  border-radius: 50%;
-
-  background-color: #f9f1d9;
+  background: #f9f1d9;
 
   color: #c39118;
+
+  border-radius: 50%;
 
   font-size: 22px;
 }
@@ -813,6 +824,7 @@ button {
   color: #777777;
 
   font-size: 13px;
+
   line-height: 1.6;
 }
 
@@ -836,16 +848,13 @@ button {
   display: flex;
   align-items: center;
 
-  background: linear-gradient(
-    90deg,
-    rgba(8, 13, 43, 0.98),
-    rgba(8, 13, 43, 0.85)
-  );
+  background: linear-gradient(90deg, #080d2b, #11183d);
 
   color: #ffffff;
 }
 
 .about-content {
+  width: 100%;
   max-width: 650px;
 }
 
@@ -861,6 +870,8 @@ button {
 .about h2 {
   margin: 15px 0;
 
+  color: #ffffff;
+
   font-size: 40px;
 }
 
@@ -870,11 +881,12 @@ button {
   color: #d2d5df;
 
   font-size: 15px;
+
   line-height: 1.7;
 }
 
 /* =========================================================
-   CTA / CONTACTOS
+   CTA
 ========================================================= */
 
 .cta {
@@ -888,7 +900,7 @@ button {
 
   gap: 30px;
 
-  background-color: #f6f6f8;
+  background: #f6f6f8;
 
   border-left: 5px solid #e8b832;
 }
@@ -919,11 +931,13 @@ button {
 .cta > a {
   padding: 14px 25px;
 
-  border-radius: 5px;
+  flex-shrink: 0;
 
-  background-color: #080d2b;
+  background: #080d2b;
 
   color: #ffffff;
+
+  border-radius: 5px;
 
   font-weight: bold;
 
@@ -933,13 +947,13 @@ button {
 }
 
 .cta > a:hover {
-  background-color: #e8b832;
+  background: #e8b832;
 
   color: #080d2b;
 }
 
 /* =========================================================
-   FOOTER DESKTOP
+   FOOTER
 ========================================================= */
 
 footer {
@@ -953,7 +967,7 @@ footer {
 
   gap: 40px;
 
-  background-color: #080d2b;
+  background: #080d2b;
 
   color: #ffffff;
 }
@@ -967,12 +981,10 @@ footer > div {
   height: 90px;
 
   object-fit: contain;
-
-  display: block;
 }
 
 .footer-logo p {
-  margin-top: 5px;
+  margin-top: 8px;
 
   color: #b7bbc9;
 
@@ -1018,7 +1030,7 @@ footer a:hover {
 
   padding: 18px 20px;
 
-  background-color: #05081d;
+  background: #05081d;
 
   color: #777d93;
 
@@ -1029,11 +1041,20 @@ footer a:hover {
 
 /* =========================================================
    TABLET
+   801px — 1150px
 ========================================================= */
 
 @media (max-width: 1150px) {
+  .header {
+    padding: 10px 4%;
+  }
+
   .menu {
-    gap: 15px;
+    gap: 13px;
+  }
+
+  .menu a {
+    font-size: 12px;
   }
 
   .phone {
@@ -1048,384 +1069,72 @@ footer a:hover {
     flex-wrap: wrap;
   }
 
-  .benefits {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .destination-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .package-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  footer {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 800px) {
-  /* HEADER */
-
-  .header {
-    min-height: 80px;
-
-    padding: 8px 20px;
-
-    gap: 15px;
-  }
-
-  /* LOGO */
-
-  .logo img {
-    width: 80px;
-    height: 65px;
-  }
-
-  .logo-text {
-    display: none;
-  }
-
-  /* HEADER RIGHT */
-
-  .header-right {
-    display: none;
-  }
-
-  /* MENU HAMBÚRGUER */
-
-  .menu-toggle {
-    display: flex;
-
-    margin-left: auto;
-  }
-
-  /* MENU MOBILE */
-
-  .menu {
-    display: none;
-
-    position: absolute;
-
-    top: 80px;
-    left: 0;
-
-    width: 100%;
-
-    padding: 25px 20px;
-
-    flex-direction: column;
-    align-items: center;
-
-    gap: 20px;
-
-    background-color: #ffffff;
-
-    border-top: 1px solid #eeeeee;
-
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-
-    z-index: 999;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu a {
-    width: 100%;
-
-    padding: 6px 0;
-
-    color: #080d2b;
-
-    font-size: 16px;
-
-    text-align: center;
-  }
-
-  .menu a:hover {
-    color: #c39118;
-  }
-
-  /* HERO */
-
-  .hero {
-    min-height: 520px;
-
-    padding: 70px 20px;
-
-    background-position: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn-gold,
-  .btn-outline {
-    width: 100%;
-    max-width: 280px;
-
-    text-align: center;
-  }
-
-  /* BOOKING */
-
-  .booking {
-    width: calc(100% - 40px);
-
-    margin-top: -30px;
-
-    padding: 20px;
-  }
-
-  .booking-tabs {
-    flex-wrap: wrap;
-
-    gap: 15px;
-  }
-
-  .booking-form {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-  }
-
-  .booking-field {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .swap {
-    margin: 0 auto;
-  }
-
   .search-button {
-    width: 100%;
-
     margin-left: 0;
   }
 
-  /* BENEFÍCIOS */
-
   .benefits {
-    padding: 50px 20px;
-
-    grid-template-columns: 1fr;
-  }
-
-  /* DESTINOS */
-
-  .destinations {
-    padding: 60px 20px;
-  }
-
-  .section-title {
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 20px;
-  }
-
-  .section-title h2 {
-    font-size: 30px;
-  }
-
-  .see-more {
-    white-space: normal;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .destination-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* PACOTES */
-
-  .packages {
-    padding: 60px 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .package-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* SOBRE */
-
-  .about {
-    padding: 60px 20px;
-  }
-
-  .about h2 {
-    font-size: 32px;
-  }
-
-  /* CTA */
-
-  .cta {
-    margin: 40px 20px;
-
-    padding: 30px 20px;
-
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cta > a {
-    width: 100%;
-
-    text-align: center;
-  }
-
-  /* FOOTER */
-
-  footer {
-    width: 100%;
-
-    padding: 50px 20px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 40px;
-
-    text-align: center;
-  }
-
-  footer > div {
-    width: 100%;
-    max-width: 320px;
-
-    margin: 0 auto;
-
-    text-align: center;
-  }
-
-  .footer-logo img {
-    margin: 0 auto 15px;
-  }
-
-  .footer-logo p {
-    text-align: center;
-  }
-
-  footer h3 {
-    text-align: center;
-  }
-
-  footer a,
-  footer p {
-    text-align: center;
-  }
-
-  .social {
-    align-items: center;
-  }
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
-  .header {
-    padding: 10px 25px;
-  }
-
-  .menu {
-    gap: 12px;
-  }
-
-  .phone {
-    display: none;
-  }
-
-  .booking {
-    width: 92%;
-  }
-
-  .booking-form {
-    flex-wrap: wrap;
-  }
-
-  .benefits {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .destination-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .package-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   footer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 /* =========================================================
    MOBILE
+   até 800px
 ========================================================= */
 
-@media (max-width: 700px) {
-  /* evita elementos saindo da tela */
-
+@media (max-width: 800px) {
   html,
   body {
     width: 100%;
     max-width: 100%;
+
     overflow-x: hidden;
   }
 
-  /* ================= HEADER ================= */
+  /* =========================
+       HEADER
+    ========================= */
 
   .header {
     width: 100%;
-    min-height: 75px;
-    height: auto;
+    min-height: 76px;
 
     padding: 8px 18px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 10px;
 
     position: relative;
   }
 
-  /* LOGO */
+  /* =========================
+       LOGO
+    ========================= */
 
   .logo {
+    width: auto;
+
     flex-shrink: 0;
   }
 
   .logo img {
-    width: 75px;
-    height: 60px;
+    width: 78px !important;
+    max-width: 78px !important;
+
+    height: 58px !important;
+
     object-fit: contain;
   }
 
@@ -1433,67 +1142,59 @@ footer a:hover {
     display: none;
   }
 
-  /* ESCONDE ÁREA DIREITA */
+  /* =========================
+       ÁREA DIREITA
+    ========================= */
 
   .header-right {
     display: none;
   }
 
-  /* ================= HAMBÚRGUER ================= */
+  /* =========================
+       HAMBÚRGUER
+    ========================= */
 
   .menu-toggle {
     display: flex;
 
-    width: 42px;
-    height: 42px;
-
     margin-left: auto;
 
-    border: none;
-    background: transparent;
+    flex-shrink: 0;
 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 
-    gap: 5px;
-
-    cursor: pointer;
+    z-index: 10001;
   }
 
-  .menu-toggle span {
-    width: 26px;
-    height: 3px;
-
-    background: #080d2b;
-
-    border-radius: 5px;
-  }
-
-  /* ================= MENU ================= */
+  /* =========================
+       MENU MOBILE
+    ========================= */
 
   .menu {
     display: none;
 
     position: absolute;
 
-    top: 75px;
+    top: 76px;
     left: 0;
+    right: 0;
 
     width: 100%;
 
-    padding: 25px 20px;
-
-    background: white;
+    padding: 20px;
 
     flex-direction: column;
     align-items: center;
 
-    gap: 20px;
+    gap: 5px;
 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
 
-    z-index: 9999;
+    border-top: 1px solid #eeeeee;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    z-index: 10000;
   }
 
   .menu.active {
@@ -1503,21 +1204,22 @@ footer a:hover {
   .menu a {
     width: 100%;
 
-    text-align: center;
+    padding: 12px;
 
     color: #080d2b;
 
-    font-size: 16px;
+    text-align: center;
 
-    padding: 5px;
+    font-size: 15px;
   }
 
-  /* ================= HERO ================= */
+  /* =========================
+       HERO
+    ========================= */
 
   .hero {
     width: 100%;
     min-height: 500px;
-    height: auto;
 
     padding: 60px 20px;
 
@@ -1528,29 +1230,44 @@ footer a:hover {
     width: 100%;
     max-width: 100%;
 
-    padding: 20px 0;
+    padding: 10px 0;
   }
 
   .hero-small {
+    display: block;
+
     font-size: 10px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1.5px;
   }
 
   .hero h1 {
-    font-size: 36px;
+    margin: 20px 0;
+
+    font-size: 38px;
+
     line-height: 1.1;
   }
 
   .hero-content p {
+    max-width: 500px;
+
     font-size: 14px;
+
     line-height: 1.6;
   }
 
-  /* HERO BOTÕES */
+  /* =========================
+       BOTÕES HERO
+    ========================= */
 
   .hero-buttons {
     width: 100%;
 
-    display: flex;
+    margin-top: 25px;
+
     flex-direction: column;
     align-items: center;
 
@@ -1565,7 +1282,9 @@ footer a:hover {
     text-align: center;
   }
 
-  /* ================= PESQUISA ================= */
+  /* =========================
+       BOOKING
+    ========================= */
 
   .booking {
     width: calc(100% - 30px);
@@ -1573,15 +1292,27 @@ footer a:hover {
     margin: -25px auto 0;
 
     padding: 20px 18px;
+
+    border-radius: 8px;
   }
 
   .booking-tabs {
+    width: 100%;
+
+    margin-bottom: 22px;
+
     display: flex;
+    justify-content: space-between;
 
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 5px;
+  }
 
-    gap: 10px;
+  .booking-tabs button {
+    flex: 1;
+
+    padding: 10px 3px;
+
+    font-size: 12px;
   }
 
   .booking-form {
@@ -1589,7 +1320,6 @@ footer a:hover {
 
     display: flex;
     flex-direction: column;
-
     align-items: stretch;
 
     gap: 18px;
@@ -1599,41 +1329,67 @@ footer a:hover {
     width: 100%;
     min-width: 0;
 
-    text-align: left;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .booking-field label {
+    font-size: 10px;
+  }
+
+  .booking-field strong {
+    font-size: 15px;
+  }
+
+  .booking-field small {
+    font-size: 12px;
   }
 
   .swap {
-    margin: 0 auto;
+    margin: -3px auto;
   }
 
   .search-button {
     width: 100%;
 
     margin: 0;
+
+    padding: 15px;
   }
 
-  /* ================= BENEFÍCIOS ================= */
+  /* =========================
+       BENEFÍCIOS
+    ========================= */
 
   .benefits {
     width: 100%;
 
-    padding: 50px 20px;
+    padding: 55px 20px;
 
     grid-template-columns: 1fr;
 
     gap: 30px;
   }
 
-  /* ================= DESTINOS ================= */
+  .benefit {
+    width: 100%;
+  }
+
+  /* =========================
+       DESTINOS
+    ========================= */
 
   .destinations {
     width: 100%;
 
-    padding: 55px 20px;
+    padding: 60px 20px;
   }
 
   .section-title {
     width: 100%;
+
+    margin-bottom: 30px;
 
     flex-direction: column;
     align-items: flex-start;
@@ -1642,8 +1398,17 @@ footer a:hover {
   }
 
   .section-title h2 {
-    font-size: 28px;
+    font-size: 29px;
+
     line-height: 1.2;
+  }
+
+  .section-title p {
+    line-height: 1.5;
+  }
+
+  .see-more {
+    white-space: normal;
   }
 
   .destination-grid {
@@ -1651,7 +1416,7 @@ footer a:hover {
 
     grid-template-columns: 1fr;
 
-    gap: 20px;
+    gap: 22px;
   }
 
   .destination-card {
@@ -1660,15 +1425,18 @@ footer a:hover {
 
   .destination-image {
     width: 100%;
-    height: 210px;
+
+    height: 220px;
   }
 
-  /* ================= PACOTES ================= */
+  /* =========================
+       PACOTES
+    ========================= */
 
   .packages {
     width: 100%;
 
-    padding: 55px 20px;
+    padding: 60px 20px;
   }
 
   .package-grid {
@@ -1681,15 +1449,19 @@ footer a:hover {
 
   .package-card {
     width: 100%;
+
+    padding: 25px;
   }
 
-  /* ================= SOBRE ================= */
+  /* =========================
+       SOBRE
+    ========================= */
 
   .about {
     width: 100%;
     min-height: auto;
 
-    padding: 55px 20px;
+    padding: 60px 20px;
 
     text-align: center;
   }
@@ -1700,10 +1472,18 @@ footer a:hover {
   }
 
   .about h2 {
-    font-size: 29px;
+    font-size: 31px;
+
+    line-height: 1.2;
   }
 
-  /* ================= CONTACTO ================= */
+  .about p {
+    font-size: 14px;
+  }
+
+  /* =========================
+       CTA
+    ========================= */
 
   .cta {
     width: auto;
@@ -1712,27 +1492,31 @@ footer a:hover {
 
     padding: 30px 20px;
 
-    display: flex;
     flex-direction: column;
-
     align-items: stretch;
 
-    text-align: center;
-
     gap: 25px;
+
+    text-align: center;
   }
 
   .cta h2 {
     font-size: 25px;
+
+    line-height: 1.25;
   }
 
   .cta > a {
     width: 100%;
 
     text-align: center;
+
+    white-space: normal;
   }
 
-  /* ================= FOOTER ================= */
+  /* =========================
+       FOOTER
+    ========================= */
 
   footer {
     width: 100%;
@@ -1741,55 +1525,89 @@ footer a:hover {
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
 
-    gap: 40px;
+    gap: 38px;
 
     text-align: center;
   }
 
   footer > div {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
 
     margin: 0 auto;
 
-    text-align: center;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  .footer-logo {
     text-align: center;
   }
 
   .footer-logo img {
-    width: 140px;
-    height: auto;
+    width: 120px !important;
+    max-width: 120px !important;
 
-    display: block;
+    height: 90px !important;
 
-    margin: 0 auto 15px;
+    margin: 0 auto 10px;
+
+    object-fit: contain;
+  }
+
+  .footer-logo p {
+    width: 100%;
+
+    margin: 0;
+
+    text-align: center;
   }
 
   footer h3 {
+    width: 100%;
+
+    margin-bottom: 15px;
+
     text-align: center;
+
+    font-size: 17px;
   }
 
-  footer p,
-  footer a {
+  footer a,
+  footer p {
+    width: 100%;
+
+    margin: 5px 0;
+
+    display: block;
+
     text-align: center;
+
+    font-size: 14px;
+
+    overflow-wrap: anywhere;
   }
 
   .social {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
-
     align-items: center;
 
-    gap: 8px;
+    gap: 5px;
   }
 
-  /* ================= COPYRIGHT ================= */
+  .social a {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  /* =========================
+       COPYRIGHT
+    ========================= */
 
   .copyright {
     width: 100%;
@@ -1797,5 +1615,78 @@ footer a:hover {
     padding: 18px 15px;
 
     text-align: center;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    white-space: normal;
+  }
+}
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
+@media (max-width: 420px) {
+  .header {
+    padding: 7px 15px;
+  }
+
+  .logo img {
+    width: 70px !important;
+    max-width: 70px !important;
+
+    height: 55px !important;
+  }
+
+  .hero {
+    min-height: 480px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .booking {
+    width: calc(100% - 24px);
+
+    padding: 18px 15px;
+  }
+
+  .booking-tabs button {
+    font-size: 11px;
+  }
+
+  .destinations,
+  .packages,
+  .about {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-title h2 {
+    font-size: 27px;
+  }
+
+  .destination-image {
+    height: 200px;
+  }
+
+  .cta {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  footer {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }

@@ -13,9 +13,7 @@
   </head>
 
   <body>
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- HEADER -->
 
     <header class="header">
       <a href="#inicio" class="logo">
@@ -23,12 +21,11 @@
 
         <div class="logo-text">
           <strong>GH VOOS</strong>
-
-          <span> Portugal <b>•</b> Brasil </span>
+          <span>Portugal <b>•</b> Brasil</span>
         </div>
       </a>
 
-      <!-- MENU HAMBÚRGUER -->
+      <!-- HAMBÚRGUER -->
 
       <button
         class="menu-toggle"
@@ -44,7 +41,7 @@
 
       <!-- MENU -->
 
-      <nav class="menu">
+      <nav class="menu" id="menu">
         <a href="#inicio" class="active"> Início </a>
 
         <a href="#destinos"> Destinos </a>
@@ -58,8 +55,6 @@
         <a href="#contactos"> Contactos </a>
       </nav>
 
-      <!-- HEADER DIREITA -->
-
       <div class="header-right">
         <span class="phone"> ☎ +351 912 345 678 </span>
 
@@ -67,9 +62,7 @@
       </div>
     </header>
 
-    <!-- =========================================
-         HERO
-    ========================================== -->
+    <!-- HERO -->
 
     <section id="inicio" class="hero">
       <div class="hero-overlay"></div>
@@ -79,10 +72,8 @@
 
         <h1>
           Portugal e Brasil
-
           <br />
-
-          <span> mais perto de si. </span>
+          <span>mais perto de si.</span>
         </h1>
 
         <p>
@@ -98,9 +89,7 @@
       </div>
     </section>
 
-    <!-- =========================================
-         PESQUISA DE VOOS
-    ========================================== -->
+    <!-- PESQUISA -->
 
     <section class="booking">
       <div class="booking-tabs">
@@ -112,69 +101,42 @@
       </div>
 
       <div class="booking-form">
-        <!-- ORIGEM -->
-
         <div class="booking-field">
           <label>DE</label>
-
-          <strong> Lisboa (LIS) </strong>
-
-          <small> Portugal </small>
+          <strong>Lisboa (LIS)</strong>
+          <small>Portugal</small>
         </div>
-
-        <!-- TROCAR -->
 
         <button class="swap" type="button" aria-label="Trocar origem e destino">
           ⇄
         </button>
 
-        <!-- DESTINO -->
-
         <div class="booking-field">
           <label>PARA</label>
-
-          <strong> São Paulo (GRU) </strong>
-
-          <small> Brasil </small>
+          <strong>São Paulo (GRU)</strong>
+          <small>Brasil</small>
         </div>
-
-        <!-- IDA -->
 
         <div class="booking-field">
           <label>IDA</label>
-
-          <strong> 12/09/2026 </strong>
+          <strong>12/09/2026</strong>
         </div>
-
-        <!-- VOLTA -->
 
         <div class="booking-field">
           <label>VOLTA</label>
-
-          <strong> 22/09/2026 </strong>
+          <strong>22/09/2026</strong>
         </div>
-
-        <!-- PASSAGEIROS -->
 
         <div class="booking-field">
           <label>PASSAGEIROS</label>
-
-          <strong> 👤 1 Passageiro </strong>
+          <strong>👤 1 Passageiro</strong>
         </div>
 
-        <!-- PESQUISAR -->
-
-        <button class="search-button" type="button">
-          Pesquisar
-
-          <span>🔍</span>
-        </button>
+        <button class="search-button" type="button">Pesquisar 🔍</button>
       </div>
     </section>
 
-    <!-- =========================================
-         BENEFÍCIOS
-    ========================================== -->
+    <!-- SERVIÇOS -->
 
     <section id="servicos" class="benefits">
       <div class="benefit">
@@ -218,14 +180,12 @@
       </div>
     </section>
 
-    <!-- =========================================
-         DESTINOS
-    ========================================== -->
+    <!-- DESTINOS -->
 
     <section id="destinos" class="destinations">
       <div class="section-title">
         <div>
-          <span> DESTINOS EM DESTAQUE </span>
+          <span>DESTINOS EM DESTAQUE</span>
 
           <h2>Descubra Portugal e Brasil</h2>
 
@@ -242,7 +202,7 @@
           <div class="destination-image">
             <img src="img/lisboa1.avif" alt="Lisboa" />
 
-            <span> 🇵🇹 PORTUGAL </span>
+            <span>🇵🇹 PORTUGAL</span>
           </div>
 
           <div class="destination-info">
@@ -260,7 +220,7 @@
           <div class="destination-image">
             <img src="img/porto.avif" alt="Porto" />
 
-            <span> 🇵🇹 PORTUGAL </span>
+            <span>🇵🇹 PORTUGAL</span>
           </div>
 
           <div class="destination-info">
@@ -272,13 +232,13 @@
           </div>
         </article>
 
-        <!-- RIO DE JANEIRO -->
+        <!-- RIO -->
 
         <article class="destination-card">
           <div class="destination-image">
             <img src="img/riodejaneiro.avif" alt="Rio de Janeiro" />
 
-            <span> 🇧🇷 BRASIL </span>
+            <span>🇧🇷 BRASIL</span>
           </div>
 
           <div class="destination-info">
@@ -296,7 +256,7 @@
           <div class="destination-image">
             <img src="img/salvador.jpg" alt="Salvador" />
 
-            <span> 🇧🇷 BRASIL </span>
+            <span>🇧🇷 BRASIL</span>
           </div>
 
           <div class="destination-info">
@@ -310,9 +270,7 @@
       </div>
     </section>
 
-    <!-- =========================================
-         PACOTES
-    ========================================== -->
+    <!-- PACOTES -->
 
     <section id="pacotes" class="packages">
       <div class="section-title">
@@ -326,8 +284,6 @@
       </div>
 
       <div class="package-grid">
-        <!-- PORTUGAL BRASIL -->
-
         <article class="package-card">
           <div class="package-icon">✈</div>
 
@@ -338,8 +294,6 @@
           <a href="#contactos"> Saber mais → </a>
         </article>
 
-        <!-- BRASIL PORTUGAL -->
-
         <article class="package-card">
           <div class="package-icon">🌎</div>
 
@@ -349,8 +303,6 @@
 
           <a href="#contactos"> Saber mais → </a>
         </article>
-
-        <!-- PERSONALIZADOS -->
 
         <article class="package-card">
           <div class="package-icon">🧳</div>
@@ -364,9 +316,7 @@
       </div>
     </section>
 
-    <!-- =========================================
-         SOBRE
-    ========================================== -->
+    <!-- SOBRE -->
 
     <section id="sobre" class="about">
       <div class="about-content">
@@ -384,9 +334,7 @@
       </div>
     </section>
 
-    <!-- =========================================
-         CONTACTOS
-    ========================================== -->
+    <!-- CONTACTO -->
 
     <section id="contactos" class="cta">
       <div>
@@ -403,38 +351,26 @@
       <a href="mailto:ghvoospt@gmail.com"> Fale Conosco </a>
     </section>
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
+    <!-- FOOTER -->
 
     <footer>
-      <!-- LOGO -->
-
       <div class="footer-logo">
         <img src="img/logo.jpg" alt="GH Voos Portugal" />
 
         <p>Portugal • Brasil</p>
       </div>
 
-      <!-- LINKS -->
-
-      <div>
+      <div class="footer-group">
         <h3>Links</h3>
 
-        <a href="#inicio"> Início </a>
-
-        <a href="#destinos"> Destinos </a>
-
-        <a href="#pacotes"> Pacotes </a>
-
-        <a href="#servicos"> Serviços </a>
-
-        <a href="#contactos"> Contactos </a>
+        <a href="#inicio">Início</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contactos">Contactos</a>
       </div>
 
-      <!-- CONTACTO -->
-
-      <div>
+      <div class="footer-group">
         <h3>Contacto</h3>
 
         <p>☎ +351 912 345 678</p>
@@ -444,9 +380,7 @@
         <p>Portugal</p>
       </div>
 
-      <!-- REDES -->
-
-      <div>
+      <div class="footer-group">
         <h3>Siga-nos</h3>
 
         <div class="social">
@@ -459,15 +393,7 @@
       </div>
     </footer>
 
-    <!-- =========================================
-         COPYRIGHT
-    ========================================== -->
-
     <div class="copyright">© 2026 GH VOOS PT — Portugal • Brasil</div>
-
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
 
     <script src="script.js"></script>
   </body>

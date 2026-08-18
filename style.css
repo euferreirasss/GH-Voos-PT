@@ -1346,35 +1346,456 @@ footer a:hover {
 }
 
 /* =========================================================
-   MOBILE PEQUENO
+   TABLET
 ========================================================= */
 
-@media (max-width: 500px) {
-  .hero h1 {
-    font-size: 34px;
+@media (max-width: 1000px) {
+  .header {
+    padding: 10px 25px;
+  }
+
+  .menu {
+    gap: 12px;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .booking {
+    width: 92%;
+  }
+
+  .booking-form {
+    flex-wrap: wrap;
+  }
+
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .package-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  /* evita elementos saindo da tela */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* ================= HEADER ================= */
+
+  .header {
+    width: 100%;
+    min-height: 75px;
+    height: auto;
+
+    padding: 8px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+  }
+
+  /* LOGO */
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  .logo img {
+    width: 75px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  /* ESCONDE ÁREA DIREITA */
+
+  .header-right {
+    display: none;
+  }
+
+  /* ================= HAMBÚRGUER ================= */
+
+  .menu-toggle {
+    display: flex;
+
+    width: 42px;
+    height: 42px;
+
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 3px;
+
+    background: #080d2b;
+
+    border-radius: 5px;
+  }
+
+  /* ================= MENU ================= */
+
+  .menu {
+    display: none;
+
+    position: absolute;
+
+    top: 75px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 25px 20px;
+
+    background: white;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+    z-index: 9999;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+
+    text-align: center;
+
+    color: #080d2b;
+
+    font-size: 16px;
+
+    padding: 5px;
+  }
+
+  /* ================= HERO ================= */
+
+  .hero {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+
+    padding: 60px 20px;
+
+    background-position: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 20px 0;
   }
 
   .hero-small {
-    font-size: 9px;
+    font-size: 10px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.1;
   }
 
   .hero-content p {
     font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* HERO BOTÕES */
+
+  .hero-buttons {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .btn-gold,
+  .btn-outline {
+    width: 100%;
+    max-width: 280px;
+
+    text-align: center;
+  }
+
+  /* ================= PESQUISA ================= */
+
+  .booking {
+    width: calc(100% - 30px);
+
+    margin: -25px auto 0;
+
+    padding: 20px 18px;
+  }
+
+  .booking-tabs {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .booking-form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 18px;
+  }
+
+  .booking-field {
+    width: 100%;
+    min-width: 0;
+
+    text-align: left;
+  }
+
+  .swap {
+    margin: 0 auto;
+  }
+
+  .search-button {
+    width: 100%;
+
+    margin: 0;
+  }
+
+  /* ================= BENEFÍCIOS ================= */
+
+  .benefits {
+    width: 100%;
+
+    padding: 50px 20px;
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  /* ================= DESTINOS ================= */
+
+  .destinations {
+    width: 100%;
+
+    padding: 55px 20px;
+  }
+
+  .section-title {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 18px;
   }
 
   .section-title h2 {
     font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .destination-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .destination-card {
+    width: 100%;
+  }
+
+  .destination-image {
+    width: 100%;
+    height: 210px;
+  }
+
+  /* ================= PACOTES ================= */
+
+  .packages {
+    width: 100%;
+
+    padding: 55px 20px;
+  }
+
+  .package-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .package-card {
+    width: 100%;
+  }
+
+  /* ================= SOBRE ================= */
+
+  .about {
+    width: 100%;
+    min-height: auto;
+
+    padding: 55px 20px;
+
+    text-align: center;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 100%;
   }
 
   .about h2 {
-    font-size: 28px;
+    font-size: 29px;
+  }
+
+  /* ================= CONTACTO ================= */
+
+  .cta {
+    width: auto;
+
+    margin: 40px 20px;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    text-align: center;
+
+    gap: 25px;
   }
 
   .cta h2 {
-    font-size: 24px;
+    font-size: 25px;
+  }
+
+  .cta > a {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  /* ================= FOOTER ================= */
+
+  footer {
+    width: 100%;
+
+    padding: 50px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 40px;
+
+    text-align: center;
   }
 
   footer > div {
-    max-width: 280px;
+    width: 100%;
+    max-width: 300px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-logo img {
+    width: 140px;
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 15px;
+  }
+
+  footer h3 {
+    text-align: center;
+  }
+
+  footer p,
+  footer a {
+    text-align: center;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  /* ================= COPYRIGHT ================= */
+
+  .copyright {
+    width: 100%;
+
+    padding: 18px 15px;
+
+    text-align: center;
   }
 }

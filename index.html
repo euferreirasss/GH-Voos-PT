@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="img/logo.jpg" type="image/x-icon" />
+    <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 
     <title>GH VOOS PT | Portugal • Brasil</title>
 
@@ -13,9 +13,9 @@
   </head>
 
   <body>
-    <!-- =========================
+    <!-- =========================================
          HEADER
-    ========================== -->
+    ========================================== -->
 
     <header class="header">
       <a href="#inicio" class="logo">
@@ -23,16 +23,26 @@
 
         <div class="logo-text">
           <strong>GH VOOS</strong>
-          <span>Portugal <b>•</b> Brasil</span>
+
+          <span> Portugal <b>•</b> Brasil </span>
         </div>
       </a>
 
-      <!-- Menu Toggle Button -->
-      <button class="menu-toggle" id="menu-toggle">
+      <!-- MENU HAMBÚRGUER -->
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
+
+      <!-- MENU -->
 
       <nav class="menu">
         <a href="#inicio" class="active"> Início </a>
@@ -48,6 +58,8 @@
         <a href="#contactos"> Contactos </a>
       </nav>
 
+      <!-- HEADER DIREITA -->
+
       <div class="header-right">
         <span class="phone"> ☎ +351 912 345 678 </span>
 
@@ -55,9 +67,9 @@
       </div>
     </header>
 
-    <!-- =========================
+    <!-- =========================================
          HERO
-    ========================== -->
+    ========================================== -->
 
     <section id="inicio" class="hero">
       <div class="hero-overlay"></div>
@@ -70,7 +82,7 @@
 
           <br />
 
-          <span>mais perto de si.</span>
+          <span> mais perto de si. </span>
         </h1>
 
         <p>
@@ -86,67 +98,83 @@
       </div>
     </section>
 
-    <!-- =========================
+    <!-- =========================================
          PESQUISA DE VOOS
-    ========================== -->
+    ========================================== -->
 
     <section class="booking">
       <div class="booking-tabs">
-        <button class="selected">✈ Voos</button>
+        <button type="button" class="selected">✈ Voos</button>
 
-        <button>🧳 Pacotes</button>
+        <button type="button">🧳 Pacotes</button>
 
-        <button>🏨 Hotéis</button>
+        <button type="button">🏨 Hotéis</button>
       </div>
 
       <div class="booking-form">
+        <!-- ORIGEM -->
+
         <div class="booking-field">
-          <label> DE </label>
+          <label>DE</label>
 
           <strong> Lisboa (LIS) </strong>
 
           <small> Portugal </small>
         </div>
 
-        <button class="swap">⇄</button>
+        <!-- TROCAR -->
+
+        <button class="swap" type="button" aria-label="Trocar origem e destino">
+          ⇄
+        </button>
+
+        <!-- DESTINO -->
 
         <div class="booking-field">
-          <label> PARA </label>
+          <label>PARA</label>
 
           <strong> São Paulo (GRU) </strong>
 
           <small> Brasil </small>
         </div>
 
+        <!-- IDA -->
+
         <div class="booking-field">
-          <label> IDA </label>
+          <label>IDA</label>
 
           <strong> 12/09/2026 </strong>
         </div>
 
+        <!-- VOLTA -->
+
         <div class="booking-field">
-          <label> VOLTA </label>
+          <label>VOLTA</label>
 
           <strong> 22/09/2026 </strong>
         </div>
 
+        <!-- PASSAGEIROS -->
+
         <div class="booking-field">
-          <label> PASSAGEIROS </label>
+          <label>PASSAGEIROS</label>
 
           <strong> 👤 1 Passageiro </strong>
         </div>
 
-        <button class="search-button">
+        <!-- PESQUISAR -->
+
+        <button class="search-button" type="button">
           Pesquisar
 
-          <span> 🔍 </span>
+          <span>🔍</span>
         </button>
       </div>
     </section>
 
-    <!-- =========================
+    <!-- =========================================
          BENEFÍCIOS
-    ========================== -->
+    ========================================== -->
 
     <section id="servicos" class="benefits">
       <div class="benefit">
@@ -190,9 +218,9 @@
       </div>
     </section>
 
-    <!-- =========================
+    <!-- =========================================
          DESTINOS
-    ========================== -->
+    ========================================== -->
 
     <section id="destinos" class="destinations">
       <div class="section-title">
@@ -204,7 +232,7 @@
           <p>Lugares incríveis esperando por si.</p>
         </div>
 
-        <a href="#" class="see-more"> Ver todos os destinos → </a>
+        <a href="#destinos" class="see-more"> Ver todos os destinos → </a>
       </div>
 
       <div class="destination-grid">
@@ -222,7 +250,7 @@
 
             <p>História, cultura e paisagens deslumbrantes.</p>
 
-            <a href="#"> Explorar → </a>
+            <a href="#contactos"> Explorar → </a>
           </div>
         </article>
 
@@ -240,11 +268,11 @@
 
             <p>Tradição, gastronomia e vinhos excepcionais.</p>
 
-            <a href="#"> Explorar → </a>
+            <a href="#contactos"> Explorar → </a>
           </div>
         </article>
 
-        <!-- RIO -->
+        <!-- RIO DE JANEIRO -->
 
         <article class="destination-card">
           <div class="destination-image">
@@ -258,7 +286,7 @@
 
             <p>Praias, natureza e alegria em cada esquina.</p>
 
-            <a href="#"> Explorar → </a>
+            <a href="#contactos"> Explorar → </a>
           </div>
         </article>
 
@@ -276,15 +304,15 @@
 
             <p>Cultura, história e o melhor da Bahia.</p>
 
-            <a href="#"> Explorar → </a>
+            <a href="#contactos"> Explorar → </a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- =========================
+    <!-- =========================================
          PACOTES
-    ========================== -->
+    ========================================== -->
 
     <section id="pacotes" class="packages">
       <div class="section-title">
@@ -298,6 +326,8 @@
       </div>
 
       <div class="package-grid">
+        <!-- PORTUGAL BRASIL -->
+
         <article class="package-card">
           <div class="package-icon">✈</div>
 
@@ -308,6 +338,8 @@
           <a href="#contactos"> Saber mais → </a>
         </article>
 
+        <!-- BRASIL PORTUGAL -->
+
         <article class="package-card">
           <div class="package-icon">🌎</div>
 
@@ -317,6 +349,8 @@
 
           <a href="#contactos"> Saber mais → </a>
         </article>
+
+        <!-- PERSONALIZADOS -->
 
         <article class="package-card">
           <div class="package-icon">🧳</div>
@@ -330,9 +364,9 @@
       </div>
     </section>
 
-    <!-- =========================
+    <!-- =========================================
          SOBRE
-    ========================== -->
+    ========================================== -->
 
     <section id="sobre" class="about">
       <div class="about-content">
@@ -350,9 +384,9 @@
       </div>
     </section>
 
-    <!-- =========================
+    <!-- =========================================
          CONTACTOS
-    ========================== -->
+    ========================================== -->
 
     <section id="contactos" class="cta">
       <div>
@@ -369,16 +403,20 @@
       <a href="mailto:ghvoospt@gmail.com"> Fale Conosco </a>
     </section>
 
-    <!-- =========================
+    <!-- =========================================
          FOOTER
-    ========================== -->
+    ========================================== -->
 
     <footer>
+      <!-- LOGO -->
+
       <div class="footer-logo">
         <img src="img/logo.jpg" alt="GH Voos Portugal" />
 
         <p>Portugal • Brasil</p>
       </div>
+
+      <!-- LINKS -->
 
       <div>
         <h3>Links</h3>
@@ -394,6 +432,8 @@
         <a href="#contactos"> Contactos </a>
       </div>
 
+      <!-- CONTACTO -->
+
       <div>
         <h3>Contacto</h3>
 
@@ -404,19 +444,31 @@
         <p>Portugal</p>
       </div>
 
+      <!-- REDES -->
+
       <div>
         <h3>Siga-nos</h3>
 
         <div class="social">
-          <a href="#" target="_blank"> Instagram </a>
+          <a href="#" target="_blank" rel="noopener noreferrer"> Instagram </a>
 
-          <a href="#" target="_blank"> Facebook </a>
+          <a href="#" target="_blank" rel="noopener noreferrer"> Facebook </a>
 
-          <a href="#" target="_blank"> WhatsApp </a>
+          <a href="#" target="_blank" rel="noopener noreferrer"> WhatsApp </a>
         </div>
       </div>
     </footer>
 
+    <!-- =========================================
+         COPYRIGHT
+    ========================================== -->
+
     <div class="copyright">© 2026 GH VOOS PT — Portugal • Brasil</div>
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
   </body>
 </html>
